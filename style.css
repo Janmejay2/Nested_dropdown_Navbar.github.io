@@ -1,0 +1,163 @@
+/* style for the navigation bar */
+.navbar {
+    background-color: #3498DB;
+    /* Blue background */
+    overflow: hidden;
+    color: white;
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.navbar a:hover {
+    background-color: #2980B9;
+    /* Darker blue background on hover */
+    color: #FFFFFF;
+    /* white text on hover */
+    transform: scale(1.05);
+    /* scale up on hover */
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2980B9;
+    /* Darker blue background on hover */
+    color: #FFFFFF;
+    /* white text on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495E;
+    /* slight light blue background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s;
+
+}
+
+.dropdown-content a:hover {
+    background-color: #2980B9;
+    /* Darker blue background on hover */
+    color: #FFFFFF;
+    /* white text on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Animation for the dropdeon menu */
+.dropdown:hover .dropdown-content {
+    animation: fadein 0.3s ease-in-out;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+
+/* Nested dropdown styles */
+.sub-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sub-dropdown .sub-dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 12px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sub-dropdown .sub-dropbtn:hover {
+    background-color: #2980B9;
+    /* Darker blue background on hover */
+    color: #FFFFFF;
+    /* white text on hover */
+}
+
+.sub-dropdown .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.sub-dropdown .sub-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+.sub-dropdown .sub-dropdown-content a:hover{
+    background-color: #2980B9;
+    /* Darker blue background on hover */
+    color: #FFFFFF;
+    /* white text on hover */
+}
+.sub-dropdown:hover .sub-dropdown-content{
+    display: block;
+}
+/* CSS for the nested dropdown apperaing to the left */
+.left{
+    left: 100%;
+}
+/* CSS for the nested dropdown apperaing to the Right */
+.right{
+    right: 100%;
+}
